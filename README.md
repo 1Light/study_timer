@@ -6,7 +6,7 @@ Welcome to Study Timer! This application is designed to help you manage your stu
 
 - **Deployed Project Page:** [Study Timer](https://zealous-timer.netlify.app)
 - **Final Project Blog Article:** [My Journey with Study Timer](https://www.linkedin.com/posts/activity-7216749567801774082-JqS7?utm_source=share&utm_medium=member_desktop)
-- **Author's LinkedIn:** [LinkedIn Profile](www.linkedin.com/in/nasir-adem-degu)
+- **Author's LinkedIn:** [LinkedIn Profile](https://www.linkedin.com/in/nasir-adem-degu)
 
 ## Installation
 
@@ -76,4 +76,4 @@ I am a passionate software developer with a keen interest in creating solutions 
 
 - **GitHub:** [1Light](https://github.com/1Light)
 - **Deployed Project:** [Study Timer](https://zealous-timer.netlify.app)
-- **LinkedIn:** [LinkedIn Profile](www.linkedin.com/in/nasir-adem-degu)
+- **LinkedIn:** [LinkedIn Profile](https://www.linkedin.com/in/nasir-adem-degu)
