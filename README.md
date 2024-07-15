@@ -1,4 +1,4 @@
-# Study Timer
+# Welcome to Study Timer!!!
 ![Cover Image](static/cover.png)
 ## Introduction
 
