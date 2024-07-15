@@ -105,6 +105,9 @@ def home():
 @app.route('/landing', methods=['GET', 'POST'])
 def landing():
     return render_template('landing.html')
+@app.route('/main', methods=['GET', 'POST'])
+def main():
+    return render_template('main.html')
 
 if __name__ == '__main__':
     app.run(debug=True)

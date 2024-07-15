@@ -1,5 +1,5 @@
 # Study Timer
-
+![Cover Image](static/cover.png)
 ## Introduction
 
 Welcome to Study Timer! This application is designed to help you manage your study sessions effectively using the Pomodoro Technique. With Study Timer, you can customize your study and break intervals, start, stop, and reset the timer as needed to enhance your productivity.
