@@ -1,15 +1,19 @@
+/* Importing Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Abel&family=Wittgenstein:ital,wght@0,400..900;1,400..900&display=swap');
 
+/* Resetting default styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Global settings for HTML */
 html {
     scroll-behavior: smooth;
 }
 
+/* Base styles for the body */
 body {
     font-family: "Abel", sans-serif;
     background-color: #824242;
@@ -17,6 +21,7 @@ body {
     font-size: 2rem;
 }
 
+/* Styling for links */
 a {
     color: black;
     text-decoration: none;
@@ -33,6 +38,7 @@ a:hover, a:focus {
     color: red;
 }
 
+/* Typography adjustments */
 body p, li {
     font-size: 1.3rem;
     line-height: 1.3;
@@ -42,28 +48,28 @@ body h2 {
     font-size: 2.3rem;
 }
 
-body h3 {
+body h3, body h4 {
     font-size: 1.5rem;
 }
 
-body h4 {
-    font-size: 1.5rem;
-}
-
+/* Adjustments for ordered lists */
 ol li {
     padding-left: 43vw;
     list-style-position: inside;
 } 
 
+/* Centering h1 */
 h1 {
     text-align: center;
     padding: 1rem 2rem;
 }
 
+/* Layout for sections */
 section {
     display: flow-root;
 }
 
+/* Styling for images */
 img {
     border: 2px double red;
     margin-top: 3rem;
@@ -71,13 +77,11 @@ img {
     margin-bottom: 3rem;
 }
 
-/* Header */
-
+/* Header styles */
 .header {
     display: flex;
     justify-content: space-evenly;
     padding: 1%;
-    
 }
 
 .tab {
@@ -88,8 +92,7 @@ img {
     margin-bottom: 1.5%;
 }
 
-/* Hero Section */
-
+/* Hero section styles */
 .hero img {
     width: 350px;
     height: 80vh;
@@ -98,7 +101,7 @@ img {
     border-radius: 30%;
     margin-left: 80px;
     outline-width: 5px;
-    outline-style:outset;
+    outline-style: outset;
     outline-color: white;
 }
 
@@ -119,6 +122,7 @@ img {
     margin-right: 8vw;
 }
 
+/* Additional styles for paragraphs */
 p {
     text-align: justify;
     padding: 0.5rem;
@@ -129,16 +133,15 @@ p {
     padding: 1rem;
 }
 
-.hero h3, h4 {
+.hero h3, .hero h4 {
     padding: 0.5rem;
 }
 
-.hero h2, h5, h6, p {
+.hero h2, .hero h5, .hero h6, p {
     line-height: 23px;
 }
 
-/* Features */
-
+/* Styles for features section */
 .features img, .lastimage img {
     width: 350px;
     height: 80vh;
@@ -173,17 +176,16 @@ p {
     list-style-position: inside;
 }
 
+/* Adjustment for list items */
 li {
     line-height: 2;
 }
 
 ::marker {
     color: white;
-    
 }
 
-/* Others */
-
+/* Styles for other sections */
 .others h2 {
     text-align: center;
     padding: 1rem;
@@ -196,7 +198,7 @@ li {
 
 .others h3 {
     padding: 0.5rem;
-    margin-left: 45%
+    margin-left: 45%;
 }
 
 .others img {
@@ -207,7 +209,7 @@ li {
     border-radius: 30%;
     margin-left: 80px;
     outline-width: 5px;
-    outline-style:outset;
+    outline-style: outset;
     outline-color: white;
     object-fit: contain;
     margin-right: 120px;
@@ -228,12 +230,12 @@ li {
     margin-top: 6rem;
 }
 
-.section6 h2, h3 {
+.section6 h2, .section6 h3 {
     text-align: center;
     margin: 15px auto;
 }
 
-.section5 h2, h3 {
+.section5 h2, .section5 h3 {
     text-align: center;
     margin: 15px auto;
 }
@@ -262,21 +264,11 @@ li {
     list-style-position: inside;
 }
 
-/* Testimonial */
-
-.person1 img {
+/* Testimonial section */
+.person1 img, .person2 img {
     width: 80px;
     height: 80px;
-    background-color:white;
-    border: 2px solid black;
-    margin: 10px 50px;
-    border-radius: 50%;
-}
-
-.person2 img {
-    width: 80px;
-    height: 80px;
-    background-color:white;
+    background-color: white;
     border: 2px solid black;
     margin: 10px 50px;
     border-radius: 50%;
@@ -303,36 +295,19 @@ li {
     padding-right: 90px;
 }
 
-
-/* Footer */
-
+/* Footer styles */
 .footer {
     display: flex;
-    justify-content:space-evenly;
+    justify-content: space-evenly;
     border-top: 2px dotted black;
 }
+
 .final {
     font-size: small;
     text-align: center;
 }
 
-.telegram img {
-    width: 50px;
-    height: 50px;
-    border: 2px dotted black;
-    border-radius: 50%;
-    background-color: white;
-    margin: 10px;
-}
-.instagram img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    border: 2px dotted black;
-    background-color: white;
-    margin: 10px;
-}
-.twitter img{
+.telegram img, .instagram img, .twitter img {
     width: 50px;
     height: 50px;
     border: 2px dotted black;

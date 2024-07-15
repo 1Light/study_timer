@@ -4,13 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
+    <!-- Link to external stylesheet -->
     <link rel="stylesheet" href="../static/login.css">
 </head>
 <body>
     <div class="login">
+        <!-- Logo section -->
         <div class="logo">Study Timer</div>
+        <!-- Main content section -->
         <section class="content">
             <h1>Welcome to Study Timer</h1>
+            <!-- Login form -->
             <form method="POST" action="">
                 <p>Email</p>
                 <div class="textArea">
@@ -22,12 +26,15 @@
                 </div>
                 <button type="submit" class="signIn">Sign In</button>
             </form>
+            <!-- Cancel link -->
             <a id="cancel-el" href="{{ url_for('landing') }}">Cancel</a>
         </section>
+        <!-- Validation messages section -->
         <div class="validationMessages" id="validationMessages">
             {% if message %}
+            <!-- Display warning message if there's an alert -->
             <div class="alert alert-warning">{{ message }}</div>
-        {% endif %}
+            {% endif %}
         </div>
     </div>
 </body>

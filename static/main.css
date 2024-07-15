@@ -1,35 +1,42 @@
+/* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Abel&family=Wittgenstein:ital,wght@0,400..900;1,400..900&display=swap');
 
-
+/* Global Reset and Defaults */
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Abel", sans-serif;
+  font-family: "Abel", sans-serif; /* Default font */
 }
+
+/* Body Styles */
 body {
-  background-color: #824242;
+  background-color: #824242; /* Background color */
   font-size: 1rem;
   font-weight: 500;
 }
 
+/* Header Styles */
 h1 {
   text-align: center;
   padding: 1rem 2rem;
-  color: white;
+  color: white; /* White text color */
   font-size: 3rem;
 }
 
+/* Main Container */
 .container {
-  background-color: #1b1b1b;
-  width: min(90%, 500px);
+  background-color: #1b1b1b; /* Dark background */
+  width: min(90%, 500px); /* Responsive width */
   position: absolute;
   transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
-  padding: 4em 2em;
-  border-radius: 0.5em;
+  padding: 4em 2em; /* Padding */
+  border-radius: 0.5em; /* Rounded corners */
 }
+
+/* Button Styles */
 button {
   border: none;
   outline: none;
@@ -40,161 +47,180 @@ button {
   font-weight: inherit;
 }
 
-input {
-  font-size: 0.92rem;
-  text-align: center;
-  font-weight: inherit;
-  border: 3px double #824242;
-}
-
 button:active {
-  background-color: #555;
+  background-color: #555; /* Darker background on click */
   transform: translateY(2px);
 }
 
 button:focus {
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Shadow on focus */
 }
 
+/* Input Styles */
+input {
+  font-size: 0.92rem;
+  text-align: center;
+  font-weight: inherit;
+  border: 3px double #824242; /* Double border */
+}
+
+/* Section Container */
 .section-container {
   display: flex;
   gap: 1rem;
-  justify-content:space-evenly;
+  justify-content: space-evenly;
 }
+
+/* Basic Button Styles */
 .btn {
   padding: 1em 1.5em;
   border-radius: 0.5em;
-  background-color: #3e3f43;
-  color: #a9a7a7;
+  background-color: #3e3f43; /* Dark button background */
+  color: #a9a7a7; /* Light text color */
 }
+
+/* Focused Button Styles */
 .btn-focus {
-  background-color: #824242;
-  color: #ffffff;
+  background-color: #824242; /* Focused button background */
+  color: #ffffff; /* White text color */
 }
+
+/* Time Button Container */
 .time-btn-container {
   display: flex;
   flex-direction: column;
   margin-top: 2em;
 }
+
+/* Timer Display */
 #time {
   text-align: center;
-  color: #ffffff;
-  font-size: 5em;
+  color: #ffffff; 
   font-weight: 600;
+  max-width: 100%; 
+  overflow: hidden; 
+  word-wrap: break-word; 
+  font-size: calc(5em * 0.8);
 }
+
+/* Button Container */
 .btn-container {
   display: flex;
   justify-content: center;
   font-size: 1.12rem;
   gap: 2em;
 }
+
+/* Control Buttons */
 #btn-start,
 #btn-pause {
   padding: 0.5em 1.5em;
   border-radius: 0.5em;
   cursor: pointer;
-  background-color: #ffffff;
+  background-color: #ffffff; /* White background */
   margin-top: 1rem;
 }
+
 #btn-reset {
   background-color: transparent;
   border: none;
   outline: none;
-  color: #ffffff;
+  color: #ffffff; /* White text color */
   font-size: 2em;
 }
+
+/* Hidden Elements */
 .hide {
   display: none;
 }
+
 .show {
   display: block;
 }
-/* Settings Panel */
+
+/* Settings Panel Styles */
 .settings-container {
   width: 18rem;
   height: 19rem;
-  background-color: white;  
-  margin-left: 74%;
+  background-color: white; /* White background */
+  margin-left: 74%; /* Positioned to the right */
   border-radius: 10%;
   display: grid;
-  grid-template-rows: repeat(auto-fill, minmax(40px, 1fr)); 
+  grid-template-rows: repeat(auto-fill, minmax(40px, 1fr));
   padding: 1%;
-  opacity: 0;
-  border: 5px double #824242;
+  opacity: 0; /* Initially hidden */
+  border: 5px double #824242; /* Double border */
 }
 
-.settings-container .save {
-  font-size: inherit;
-  font-family: inherit;
-  border: 2px solid black;
-  width: 9rem;
-  height: 2rem;
-  margin: 2rem auto;
-  background-color: rgba(84, 215, 33, 0.712);
-}
-
+/* Save Button Styles */
+.settings-container .save,
 .settings-container .close {
   font-size: inherit;
   font-family: inherit;
   border: 2px solid black;
   width: 9rem;
   height: 2rem;
-  margin: 2rem auto;
-  background-color:#68ABEA;
+  margin: 2rem auto; /* Centered margin */
 }
 
+.settings-container .save {
+  background-color: rgba(84, 215, 33, 0.712); /* Green background */
+}
+
+.settings-container .close {
+  background-color: #68ABEA; /* Blue background */
+}
+
+/* Input Label Styles */
 .input-label {
   display: flex;
   align-items: center;
-  justify-content:space-evenly;
+  justify-content: space-evenly;
 }
 
 .input-label :nth-child(even) {
-  margin-left: 2.5rem;
+  margin-left: 2.5rem; /* Spacing for even elements */
 }
 
+/* Specific Input Label Adjustments */
 .class1 :nth-child(2) {
-  margin-left: 4.8rem;
+  margin-left: 4.8rem; /* Specific margin adjustment */
 }
 
-.input-label input {
-  margin-right: 10px;
-  padding: 0.3rem;
-  width: 3rem;
-}
-
+/* Show/Hide Animation */
 .settings-container.show {
   opacity: 1;
-  transition: opacity 0.3s ease; 
+  transition: opacity 0.3s ease;
 }
 
 .settings-container.hide {
   opacity: 0;
 }
 
+/* Validation Messages */
+.validationMessages {
+  background-color: #824242; /* Red background */
+  width: 18rem;
+  height: 3rem;
+  margin-top: 1rem; /* Top margin */
+  margin-left: 74%; /* Positioned to the right */
+  opacity: 0; /* Initially hidden */
+  color: white; /* White text color */
+}
+
 .validationMessages.show {
   opacity: 1;
-  transition: opacity 0.3s ease; 
+  transition: opacity 0.3s ease;
 }
 
 .validationMessages.hide {
   opacity: 0;
 }
 
-.validationMessages {
- background-color: #824242;
- width: 18rem;
- height: 3rem;
- margin-top: 1rem; 
- margin-left: 74%;
- opacity: 0;
- color: white
-}
-
+/* Footer Styles */
 footer {
   font-size: small;
   text-align: center;
-  margin-top: 13%;
-  color: white;
+  margin-top: 13%; /* Top margin */
+  color: white; /* White text color */
 }
-

@@ -1,3 +1,4 @@
+// DOM elements
 let focusButton = document.getElementById("focus");
 let buttons = document.querySelectorAll(".btn");
 let shortBreakButton = document.getElementById("shortbreak");
@@ -6,77 +7,59 @@ let saveButton = document.getElementById("save");
 let closeButton = document.getElementById("close");
 let settingsButton = document.getElementById("settings");
 let settingsContainer = document.getElementById("settingsContainer");
-let validationMessages = document.getElementById("validationMessages")
+let validationMessages = document.getElementById("validationMessages");
 
 let startBtn = document.getElementById("btn-start");
 let reset = document.getElementById("btn-reset");
 let pause = document.getElementById("btn-pause");
 let time = document.getElementById("time");
+
 let set;
-let active = "focus";
-let count = 59;
-let paused = true;
-let minCount = 24;
+let active = "focus"; // Default active session type
+let count = 59; // Seconds countdown
+let paused = true; // Timer paused by default
+let minCount = 24; // Default countdown minutes for focus time
+
+// Initial display of timer
 time.textContent = `${minCount + 1}:00`;
 
+// Function to append zero to single-digit values
 const appendZero = (value) => {
-  value = value < 10 ? `0${value}` : value;
-  return value;
+  return value < 10 ? `0${value}` : value;
 };
 
+// Function to update the timer display based on active session type
 const updateTimer = () => {
-
- if (active == "focus") {
+  // Pause the timer
   pauseTimer();
-  minCount = defaultFocusTime - 1;
-  count = 59;
-  if (minCount < 10) {
-    time.textContent = '0' + `${minCount + 1}:00`;
-  }
-  else {
-    time.textContent = `${minCount + 1}:00`;
-  }
- }
 
- else if (active == "short") {
-  pauseTimer();
-  minCount = defaultShortBreakTime - 1;
-  count = 59;
-  if (minCount < 10) {
-    time.textContent = '0' + `${minCount + 1}:00`;
+  // Update countdown based on active session
+  if (active === "focus") {
+    minCount = defaultFocusTime - 1;
+  } else if (active === "short") {
+    minCount = defaultShortBreakTime - 1;
+  } else if (active === "long") {
+    minCount = defaultLongBreakTime - 1;
   }
-  else {
-    time.textContent = `${minCount + 1}:00`;
-  }
- }
 
- else if (active = "long") {
-  pauseTimer();
-  minCount = defaultLongBreakTime - 1;
-  count = 59;
-  if (minCount < 10) {
-    time.textContent = '0' + `${minCount + 1}:00`;
-  }
-  else {
-    time.textContent = `${minCount + 1}:00`;
-  }
- }
+  count = 59; // Reset seconds countdown
+  time.textContent = `${appendZero(minCount + 1)}:00`; // Update timer display
+};
 
-} 
-
-reset.addEventListener(
-  "click", () => {
-    pauseTimer();
-    updateTimer();
+// Event listener for reset button
+reset.addEventListener("click", () => {
+  pauseTimer(); // Pause the timer
+  updateTimer(); // Update timer display
 });
 
+// Function to remove focus styling from all buttons
 const removeFocus = () => {
   buttons.forEach((btn) => {
     btn.classList.remove("btn-focus");
   });
 };
 
-// Default durations
+// Default durations for focus, short break, and long break times
 let defaultFocusTime = 25;
 let defaultShortBreakTime = 5;
 let defaultLongBreakTime = 15;
@@ -86,74 +69,67 @@ const updateSettingsInputs = () => {
   document.getElementById("focusTime").value = defaultFocusTime;
   document.getElementById("shortBreakTime").value = defaultShortBreakTime;
   document.getElementById("longBreakTime").value = defaultLongBreakTime;
-
 };
 
+// Event listeners for session type buttons (focus, short break, long break)
 focusButton.addEventListener("click", () => {
-  active = "focus"
-  removeFocus();
-  focusButton.classList.add("btn-focus");
-  pauseTimer();
-  minCount = defaultFocusTime - 1;
-  count = 59;
-  time.textContent = `${minCount + 1}:00`;
+  active = "focus"; // Set active session type to focus
+  removeFocus(); // Remove focus styling from all buttons
+  focusButton.classList.add("btn-focus"); // Add focus styling to the focus button
+  updateTimer(); // Update timer display
 });
 
 shortBreakButton.addEventListener("click", () => {
-  active = "short";
-  removeFocus();
-  shortBreakButton.classList.add("btn-focus");
-  pauseTimer();
-  minCount = defaultShortBreakTime - 1;
-  count = 59;
-  time.textContent = `${appendZero(minCount + 1)}:00`;
+  active = "short"; // Set active session type to short break
+  removeFocus(); // Remove focus styling from all buttons
+  shortBreakButton.classList.add("btn-focus"); // Add focus styling to the short break button
+  updateTimer(); // Update timer display
 });
 
 longBreakButton.addEventListener("click", () => {
-  active = "long";
-  removeFocus();
-  longBreakButton.classList.add("btn-focus");
-  pauseTimer();
-  minCount = defaultLongBreakTime - 1;
-  count = 59;
-  time.textContent = `${minCount + 1}:00`;
+  active = "long"; // Set active session type to long break
+  removeFocus(); // Remove focus styling from all buttons
+  longBreakButton.classList.add("btn-focus"); // Add focus styling to the long break button
+  updateTimer(); // Update timer display
 });
 
+// Variable to track visibility state of settings container
 let visibility = false;
 
+// Event listener for settings button
 settingsButton.addEventListener("click", () => {
-  active = "settings";
-  removeFocus();
-  settingsButton.classList.add("btn-focus");
+  active = "settings"; // Set active session type to settings
+  removeFocus(); // Remove focus styling from all buttons
+  settingsButton.classList.add("btn-focus"); // Add focus styling to the settings button
 
-  if (visibility === false) {
+  // Toggle visibility of settings container
+  if (!visibility) {
     settingsContainer.classList.remove('hide');
     settingsContainer.classList.add('show');
-    updateSettingsInputs();
-    visibility = true;
-  } 
-  
-  else {
+    updateSettingsInputs(); // Update settings input values
+    visibility = true; // Update visibility state
+  } else {
     settingsContainer.classList.add('hide');
     settingsContainer.classList.remove('show');
-    visibility = false;
+    visibility = false; // Update visibility state
   }
 });
 
+// Event listener for close button in settings
 closeButton.addEventListener("click", () => {
   settingsContainer.classList.add('hide');
   settingsContainer.classList.remove('show');
   validationMessages.classList.add('hide');
   validationMessages.classList.remove('show');
-  visibility = false;
+  visibility = false; // Update visibility state
 });
 
-
+// Event listener for save button in settings
 saveButton.addEventListener("click", () => {
-
-  let newFocusTime = parseInt(document.getElementById("focusTime").value);
-  let newShortBreakTime = parseInt(document.getElementById("shortBreakTime").value);
-  let newLongBreakTime = parseInt(document.getElementById("longBreakTime").value);
+  // Get new values from settings inputs
+  let newFocusTime = document.getElementById("focusTime").value.trim();
+  let newShortBreakTime = document.getElementById("shortBreakTime").value.trim();
+  let newLongBreakTime = document.getElementById("longBreakTime").value.trim();
 
   // Validate input values
   if (newFocusTime <= 0 || isNaN(newFocusTime)) {
@@ -178,43 +154,59 @@ saveButton.addEventListener("click", () => {
   // Clear validation messages if all inputs are valid
   document.getElementById("validationMessages").textContent = "";
 
-  defaultFocusTime = parseInt(document.getElementById("focusTime").value) || defaultFocusTime;
-  defaultShortBreakTime = parseInt(document.getElementById("shortBreakTime").value) || defaultShortBreakTime;
-  defaultLongBreakTime = parseInt(document.getElementById("longBreakTime").value) || defaultLongBreakTime;
-
-  updateTimer();
+  // Update default times and reset timer
+  defaultFocusTime = newFocusTime;
+  defaultShortBreakTime = newShortBreakTime;
+  defaultLongBreakTime = newLongBreakTime;
+  updateTimer(); // Update timer display
 });
 
-pause.addEventListener(
-  "click",
-  (pauseTimer = () => {
-    paused = true;
-    clearInterval(set);
-    startBtn.classList.remove("hide");
-    pause.classList.remove("show");
-    reset.classList.remove("show");
-  })
-);
+// Function to pause the timer
+const pauseTimer = () => {
+  paused = true;
+  clearInterval(set);
+  startBtn.classList.remove("hide");
+  pause.classList.remove("show");
+  reset.classList.remove("show");
+};
 
-startBtn.addEventListener("click", () => {
+// Event listener for pause button
+pause.addEventListener("click", () => {
+  pauseTimer(); // Pause the timer
+});
+
+// Function to start the timer
+const startTimer = () => {
   reset.classList.add("show");
   pause.classList.add("show");
   startBtn.classList.add("hide");
   startBtn.classList.remove("show");
+
   if (paused) {
     paused = false;
-    time.textContent = `${appendZero(minCount)}:${appendZero(count)}`;
-    set = setInterval(() => {
-      count--;
+
+    // Check if there's time left in countdown
+    if (minCount > 0 || count > 0) {
       time.textContent = `${appendZero(minCount)}:${appendZero(count)}`;
-      if (count == 0) {
-        if (minCount != 0) {
-          minCount--;
-          count = 60;
-        } else {
-          clearInterval(set);
+
+      // Start countdown interval
+      set = setInterval(() => {
+        count--;
+        time.textContent = `${appendZero(minCount)}:${appendZero(count)}`;
+        if (count === 0) {
+          if (minCount !== 0) {
+            minCount--;
+            count = 60;
+          } else {
+            clearInterval(set);
+          }
         }
-      }
-    }, 1000);
+      }, 1000);
+    }
   }
+};
+
+// Event listener for start button
+startBtn.addEventListener("click", () => {
+  startTimer(); // Start the timer
 });

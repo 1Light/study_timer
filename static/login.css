@@ -1,12 +1,15 @@
+/* Importing Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Abel&family=Wittgenstein:ital,wght@0,400..900;1,400..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
+/* Resetting default styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Base styles for the body */
 body {
     font-family: "Abel", sans-serif;
     font-size: 1rem;
@@ -14,6 +17,7 @@ body {
     color: white;
 }
 
+/* Styling for input and button elements */
 input, button {
     text-align: center;
     display: block;
@@ -27,33 +31,38 @@ input {
     margin-bottom: 1rem;
 }
 
+/* Styling for the sign-in section */
 .signIn {
     margin-top: 1.5rem;
     margin-bottom: 1rem;
 }
 
+/* Styling for the login form */
 .login {
-border: 15px solid white;
-margin-left: 38%;
-margin-right: 40.5%;
-padding: 1rem;
-margin-top: 4rem;
-width: 325px;
-height: 500px;
-border-radius: 60px;
-outline: 5px solid black;
-box-shadow: inset 0 0 0 5px black;
+    border: 15px solid white;
+    margin-left: 38%;
+    margin-right: 40.5%;
+    padding: 1rem;
+    margin-top: 4rem;
+    width: 325px;
+    height: 500px;
+    border-radius: 60px;
+    outline: 5px solid black;
+    box-shadow: inset 0 0 0 5px black;
 }
 
+/* Styling for headings */
 h1 {
     margin-bottom: 1rem;
     text-align: center;
 }
 
+/* Styling for content section */
 .content {
     margin-top: 1rem;
 }
 
+/* Styling for logo */
 .logo {
     width: 100px;
     height: 100px;
@@ -69,28 +78,30 @@ h1 {
     font-weight: 900;
     padding: 1.5rem;
     font-family: "Pacifico", cursive;
-    color: black
+    color: black;
 }
 
+/* Styling for links */
 a {
     text-decoration: none;
-    color: white
+    color: white;
 }
-  
+
+/* Styling for validation messages */
 .validationMessages {
-   background-color: #824242;
-   width: 12rem;
-   height: 1.7rem;
-   margin-top: 13rem; 
-   margin-left: 30%;
-   margin-right: 11%;
-   opacity: 1;
-   color: white;
-   border: 2px solid #824242;
-   position: absolute;
-   top: 0;
-   right: 0;
-   transform: translateY(100%);
-   padding-left: 1rem;
-   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
-  }
+    background-color: #824242;
+    width: 12rem;
+    height: 1.7rem;
+    margin-top: 13rem; 
+    margin-left: 30%;
+    margin-right: 11%;
+    opacity: 1;
+    color: white;
+    border: 2px solid #824242;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateY(100%);
+    padding-left: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+}

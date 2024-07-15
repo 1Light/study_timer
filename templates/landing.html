@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Meta tags for character set and viewport -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Study Timer</title>
+    <!-- Link to external stylesheet -->
     <link rel="stylesheet" href="../static/landing.css" />
   </head>
   <body>
     <h1>Study Timer</h1>
+    <!-- Header navigation section -->
     <Header class="tab">
       <div class="header">
-      <a href="#heroid">Hero Section</a>
-      <a href="#featuresid">Features Section</a>
-      <a href="#howitworksid">How It Works</a>
+        <a href="#heroid">Hero Section</a>
+        <a href="#featuresid">Features Section</a>
+        <a href="#howitworksid">How It Works</a>
       </div>
     </Header>
+    <!-- Hero section with introduction -->
     <section class="hero">
       <img src="../static/images/img0.png" />
       <div class="section1">
@@ -26,11 +30,13 @@
           Whether you're studying, working, or pursuing a personal project, our
           Pomodoro Timer can help you stay on track and achieve your goals.
         </p>
+        <!-- Form to encourage user action -->
         <form action="">
           <button><a href="{{ url_for('signup') }}">Try It Now</a></button>
         </form>
       </div>
     </section>
+    <!-- Features section with detailed functionalities -->
     <section class="features">
       <img src="../static/images/pic3.png" />
       <div class="section2">
@@ -60,6 +66,7 @@
         </ol>
       </div>
     </section>
+    <!-- Additional sections for more details -->
     <div class="others">
       <section>
         <img src="../static/images/pic.png" />
@@ -108,30 +115,33 @@
         </div>
       </section>
     </div>
-      <section class="lastimage">
-        <img src="../static/images/img000.png" />
-        <div class="section5">
-          <h2>Cross-Platform Accessibility</h2>
-          <h3>Access your Study Timer seamlessly across devices:</h3>
-          <ul>
-            <li>
-              Desktop and Mobile: Use the timer on your preferred devices for
-              flexible study sessions.
-            </li>
-            <li>
-              Synced Sessions: Ensure continuity by syncing timers across
-              platforms.
-            </li>
-          </ul>
-        </div>
-      </section>
-      <section class="section6">
-          <h2>Start Your Productive Journey</h2>
-          <h3>Take control of your study routine with Study Timer today!</h3>
-          <form action="">
-            <button><a href="{{ url_for('signup') }}" target="_blank">Try It Now</a></button>
-          </form>
-      </section>
+    <!-- Last section with cross-platform accessibility -->
+    <section class="lastimage">
+      <img src="../static/images/img000.png" />
+      <div class="section5">
+        <h2>Cross-Platform Accessibility</h2>
+        <h3>Access your Study Timer seamlessly across devices:</h3>
+        <ul>
+          <li>
+            Desktop and Mobile: Use the timer on your preferred devices for
+            flexible study sessions.
+          </li>
+          <li>
+            Synced Sessions: Ensure continuity by syncing timers across
+            platforms.
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- Call to action section -->
+    <section class="section6">
+      <h2>Start Your Productive Journey</h2>
+      <h3>Take control of your study routine with Study Timer today!</h3>
+      <form action="">
+        <button><a href="{{ url_for('signup') }}" target="_blank">Try It Now</a></button>
+      </form>
+    </section>
+    <!-- User testimonials section -->
     <section class="testimonials">
       <h2>User Testimonials</h2>
       <p class="headp">See what our users are saying about Study Timer:</p>
@@ -144,7 +154,7 @@
             "Study Timer has completely revolutionized my study habits. With its
             intuitive Pomodoro Technique, I can now maintain focus and
             productivity throughout my study sessions, ensuring I make the most
-            out of my study time."John Doe
+            out of my study time." - John Doe
           </p>
         </section>
         <section class="box2">
@@ -155,11 +165,12 @@
             "I've tried numerous productivity tools, but Study Timer stands out.
             It's simple yet effective, allowing me to organize my study tasks
             efficiently. The customizable timers and visual progress tracking
-            are invaluable for staying on track.",  Jane Smith
+            are invaluable for staying on track." - Jane Smith
           </p>
         </section>
       </section>
     </section>
+    <!-- Footer section with social media links -->
     <footer class="footer">
       <div class="telegram">
         <a href="https://t.me/Aka_Semir" target="_blank"><img src="../static/images/telegram.png"></a>
@@ -171,6 +182,7 @@
         <a href="https://x.com/NasirDegu" target="_blank"><img src="../static/images/x.jpg"></a>
       </div>
     </footer>
+    <!-- Copyright notice -->
     <p class="final">&copy; 2024 Study Timer. All rights reserved.</p>
   </body>
 </html>

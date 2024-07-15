@@ -1,6 +1,8 @@
+/* Font Imports */
 @import url('https://fonts.googleapis.com/css2?family=Abel&family=Wittgenstein:ital,wght@0,400..900;1,400..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
+/* Reset and base styles */
 * {
     margin: 0;
     padding: 0;
@@ -27,22 +29,18 @@ input {
     margin-bottom: 1rem;
 }
 
-.signUp {
-    margin-top: 1.5rem;
-    margin-bottom: 1rem;
-}
-
+/* Login form styles */
 .login {
-border: 15px solid white;
-margin-left: 38%;
-margin-right: 40.5%;
-padding: 1rem;
-margin-top: 4rem;
-width: 325px;
-height: 650px;
-border-radius: 60px;
-outline: 5px solid black;
-box-shadow: inset 0 0 0 5px black;
+    border: 15px solid white;
+    margin-left: 38%;
+    margin-right: 40.5%;
+    padding: 1rem;
+    margin-top: 4rem;
+    width: 325px;
+    height: 650px;
+    border-radius: 60px;
+    outline: 5px solid black;
+    box-shadow: inset 0 0 0 5px black;
 }
 
 h1 {
@@ -69,32 +67,34 @@ h1 {
     font-weight: 900;
     padding: 1.5rem;
     font-family: "Pacifico", cursive;
-    color: black
+    color: black;
 }
 
 a {
     text-decoration: none;
-    color: white
+    color: white;
 }
 
+/* Form layout */
 .row {
     display: flex;
     justify-content: space-evenly;
 }
-  
+
+/* Validation messages */
 .validationMessages {
-   background-color: #824242;
-   width: 20rem;
-   height: 3rem;
-   margin-top: 11.5rem; 
-   margin-left: 74%;
-   margin-right: 4.5%;
-   opacity: 1;
-   color: white;
-   border: 2px solid #824242;;
-   position: absolute;
-   top: 0;
-   right: 0;
-   transform: translateY(100%);
-   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
-  }
+    background-color: #824242;
+    width: 20rem;
+    height: 3rem;
+    margin-top: 11.5rem;
+    margin-left: 74%;
+    margin-right: 4.5%;
+    opacity: 1;
+    color: white;
+    border: 2px solid #824242; /* Removed extra semicolon here */
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateY(100%);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
