@@ -25,8 +25,8 @@ mysql = MySQL(app)
 
 app.secret_key = "12345"
 
-@app.route('/', methods=['GET', 'POST'])
-def index():
+@app.route('/signup', methods=['GET', 'POST'])
+def signup():
     message = ""
 
     if request.method == 'POST':
@@ -65,19 +65,13 @@ def index():
                 mysql.connection.commit()
                 message = 'You have successfully registered!'
 
-                # Set session variables
-                session['loggedin'] = True
-                session['name'] = record[1]
-                session['email'] = record[2]
-                session['password'] = record[4]
-
                 cur.close()
                 # Redirect to main.html upon successful registration
                 return render_template('main.html', message=message)
 
             cur.close()
 
-    return render_template('index.html', message=message)
+    return render_template('signup.html', message=message)
 
 
 @app.route('/login', methods=['GET', 'POST'])
@@ -108,6 +102,9 @@ def login():
 def home():
     return render_template('home.html')
 
+@app.route('/landing', methods=['GET', 'POST'])
+def landing():
+    return render_template('landing.html')
 
 if __name__ == '__main__':
     app.run(debug=True)

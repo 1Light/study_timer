@@ -81,28 +81,20 @@ a {
     display: flex;
     justify-content: space-evenly;
 }
-
-.validationMessages.show {
-    opacity: 1;
-    transition: opacity 0.3s ease; 
-  }
-  
-.validationMessages.hide {
-    opacity: 0;
-  }
   
 .validationMessages {
-   background-color: white;
+   background-color: #824242;
    width: 20rem;
    height: 3rem;
-   margin-top: 9.5rem; 
+   margin-top: 11.5rem; 
    margin-left: 74%;
    margin-right: 4.5%;
    opacity: 1;
-   color: black;
-   border: 2px solid black;
+   color: white;
+   border: 2px solid #824242;;
    position: absolute;
    top: 0;
    right: 0;
    transform: translateY(100%);
+   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
   }
