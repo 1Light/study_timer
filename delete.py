@@ -36,5 +36,5 @@ def delete_user_by_email(email):
 
 # Example usage
 if __name__ == "__main__":
-    email_to_delete = ''
+    email_to_delete = ''  # Replace with the actual email you want to delete
     delete_user_by_email(email_to_delete)

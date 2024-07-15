@@ -26,6 +26,14 @@ input, button {
     width: 16.5rem;
 }
 
+button {
+    margin-top: 2rem;
+    background: linear-gradient(to right, lightyellow, lightgreen);
+    border-radius: 5px;
+    height: 1.8rem;
+    font-weight: bolder;
+}
+
 input {
     margin-top: 0.2rem;
     margin-bottom: 1rem;
